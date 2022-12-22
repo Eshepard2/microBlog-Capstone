@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    border: none;
+}
+
+:root{
+    --color-dark: hsl(252, 30%, 17%);
+}
+
+body{
+    font-family: sans-serif;
+    color: var(--color-dark);
+}
+
+img{
+    size: 10px;
+}
