@@ -38,8 +38,13 @@ function login(loginData) {
   return fetch(api + "/auth/login", options)
     .then((response) => response.json())
     .then((loginData) => {
-      window.localStorage.setItem("login-data", JSON.stringify(loginData));
-      // window.location.assign("/posts");  // redirect
+      if (loginData.statusCode === 200) {
+        window.localStorage.setItem("login-data", JSON.stringify(loginData));
+        window.location.assign("/posts"); // redirect
+      } else {
+        loginForm.loginButton.disabled = false;
+        alert(loginData.message);
+      }
     });
 }
 
@@ -95,11 +100,13 @@ function register(registerData) {
 
   fetch(api + "/api/users", options)
     .then((response) => response.json())
-    .then((loginData) => {
-      window.localStorage.setItem(
-        "register-data",
-        JSON.stringify(registerData)
-      );
-      window.location.assign("/posts"); // redirect
+    .then((registerResponse) => {
+      if (registerResponse.statusCode === 200) {
+        alert("New User Created");
+        window.location.reload(); // redirect
+      } else {
+        registerForm.registerButton.disabled = false;
+        alert(registerResponse.message);
+      }
     });
 }
