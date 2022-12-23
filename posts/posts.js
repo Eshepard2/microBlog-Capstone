@@ -2,17 +2,12 @@
 
 "use strict";
 
-let allPostsEndpoint = "https://microbloglite.herokuapp.com/api/posts"
+let allPostsEndpoint = "https://microbloglite.herokuapp.com/api/posts";
+let pElement = document.getElementById("postText");
 
 fetch(allPostsEndpoint)
-            .then(response => response.json())
-            .then(data => {
-                for (let i = 0; i < data.length; i++) {
-                    let row = table.insertRow(-1);
-                    let cell1 = row.insertCell(0)
-                    let cell2 = row.insertCell(1)
-                    cell1.innerHTML = data[i].username
-                    cell2.innerHTML = data[i].text
-
-                }
-            });
+  .then((response) => response.json())
+  .then((data) => {
+    let message = `<li> User: ${data.username} </li> <li> Post: ${data.text} </li>`;
+    pElement.innerHTML = message;
+  });
