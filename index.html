@@ -27,6 +27,12 @@
 
 <body>
 
+    <input type="checkbox" id="check">
+    <span id="icon"></span>
+    <div id="theme">
+        <div id="color"></div>
+    </div>
+
     <header>
         <h1>Welcome to <code>YOUR MICROBLOG NETWORK</code></h1>
     </header>
@@ -35,28 +41,32 @@
         <div class="img1" id="img1"></div>
         <div class="img2" id="img2" style="display: none;"></div>
 
-        <div class="form-box">
-            <div class="button-box">
-                <div id="btn"></div>
-                <div id="btn2" style="display: none;"></div>
-                <button type="button" class="toggle-btn" onclick="openLoginForm()">Sign In</button>
-                <button type="button" class="toggle-btn" onclick="openRegisterForm()">Sign Up</button>
-            </div>
-            <form id="login" class="input-group">
-                <input type="text" id="username" class="input-field" placeholder="User Name" required>
-                <input type="password" id="password" class="input-field" placeholder="Password" required>
-                <input type="checkbox" class="check-box"> <span>Remember Me</span>
-                <button type="submit" id="loginButton" class="submit-btn">Sign In</button>
-            </form>
+        <div class="shadow">
+            <div class="form-box">
+                <div class="button-box">
+                    <div id="btn"></div>
+                    <div id="btn2" style="display: none;"></div>
+                    <button type="button" class="toggle-btn" onclick="openLoginForm()">Sign In</button>
+                    <button type="button" class="toggle-btn" onclick="openRegisterForm()">Sign Up</button>
+                </div>
+                <form id="login" class="input-group">
+                    <input type="text" id="username" class="input-field" placeholder="User Name" required>
+                    <input type="password" id="password" class="input-field" placeholder="Password" required>
+                    <input type="checkbox" class="check-box"> <span>Remember Me</span>
+                    <button type="submit" id="loginButton" class="submit-btn">Sign In</button>
+                </form>
 
-            <form id="register" class="input-group" style="display: none;">
-                <input type="text" id="registerFullName" class="input-field" maxlength="30" placeholder="Full Name"
-                    required>
-                <input type="text" id="registerUsername" class="input-field" placeholder="Create User Name" required>
-                <input type="password" id="registerPassword" class="input-field" placeholder="Enter New Password"
-                    required>
-                <button type="submit" id="registerButton" class="submit-btn">Sign Up</button>
-            </form>
+                <form id="register" class="input-group" style="display: none;">
+                    <input type="text" id="registerFullName" class="input-field" maxlength="30" placeholder="Full Name"
+                        required>
+                    <input type="text" id="registerUsername" class="input-field" placeholder="Create User Name"
+                        required>
+                    <input type="password" id="registerPassword" class="input-field" placeholder="Enter New Password"
+                        required>
+                    <button type="submit" id="registerButton" class="submit-btn">Sign Up</button>
+                    <p>Already a Member? <a href="index.html">Click Here</a></p>
+                </form>
+            </div>
         </div>
     </main>
 
