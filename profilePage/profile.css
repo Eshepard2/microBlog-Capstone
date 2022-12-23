@@ -1,0 +1,7 @@
+#newPostForm {
+    display: inline-block;
+    justify-content: right 100px;
+    align-content: center;
+    border: 15px solid black;
+    padding: 10px;
+}
