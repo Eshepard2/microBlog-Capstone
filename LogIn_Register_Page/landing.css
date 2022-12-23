@@ -9,6 +9,7 @@ body {
   height: 100vh;
   position: relative;
   overflow: hidden;
+  background-color: #fff;
 }
 #check,
 #icon,
@@ -224,4 +225,14 @@ span {
 }
 #register {
   left: 50px;
+}
+
+p,
+a {
+  color: #999;
+  font-size: small;
+}
+
+#registerButton {
+  margin: 10px 10px;
 }
