@@ -78,7 +78,7 @@ main {
   margin: 6% auto;
   padding: 5px;
   left: 350px;
-
+  bottom: 100px;
   background: rgb(255, 255, 255);
 }
 .shadow::before {
@@ -119,14 +119,19 @@ main {
 h1 {
   position: relative;
   left: 120px;
-  top: 115px;
+  top: 50px;
+}
+h2 {
+  position: relative;
+  left: 120px;
+  top: 50px;
 }
 .img1 {
   position: absolute;
   width: 500px;
   height: 487px;
   left: 120px;
-  top: 200px;
+  top: 170px;
   background: url(assets/martina-woman-asking-a-support-worker-a-question.gif);
   background-repeat: no-repeat;
 }
@@ -135,7 +140,7 @@ h1 {
   width: 500px;
   height: 487px;
   left: 120px;
-  top: 200px;
+  top: 170px;
   background: url(assets/martina-woman-getting-thumbs-up-and-likes-on-social-media\ -\ Copy.gif);
   background-repeat: no-repeat;
 }
