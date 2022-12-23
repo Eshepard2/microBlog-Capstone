@@ -35,7 +35,7 @@ main {
 }
 #icon {
   z-index: 1;
-  background-image: url(icons8-bright-91.png);
+  background-image: url(assets/icons8-bright-91.png);
   background-size: 80%;
   background-repeat: no-repeat;
   background-position: center;
@@ -58,7 +58,7 @@ main {
 }
 
 #check:checked ~ #icon {
-  background-image: url(moooon.png);
+  background-image: url(assets/moooon.png);
 }
 #check:checked ~ #theme #color {
   background-color: rgb(26, 24, 24);
@@ -126,7 +126,7 @@ h1 {
   height: 487px;
   left: 120px;
   top: 200px;
-  background: url(martina-woman-asking-a-support-worker-a-question.gif);
+  background: url(assets/martina-woman-asking-a-support-worker-a-question.gif);
   background-repeat: no-repeat;
 }
 .img2 {
@@ -135,7 +135,7 @@ h1 {
   height: 487px;
   left: 120px;
   top: 200px;
-  background: url(martina-woman-getting-thumbs-up-and-likes-on-social-media\ -\ Copy.gif);
+  background: url(assets/martina-woman-getting-thumbs-up-and-likes-on-social-media\ -\ Copy.gif);
   background-repeat: no-repeat;
 }
 /* .form-box {
