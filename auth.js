@@ -101,7 +101,7 @@ function register(registerData) {
   fetch(api + "/api/users", options)
     .then((response) => response.json())
     .then((registerResponse) => {
-      if (registerResponse.statusCode === 200) {
+      if (registerResponse.username != undefined) {
         alert("New User Created");
         window.location.reload(); // redirect
       } else {

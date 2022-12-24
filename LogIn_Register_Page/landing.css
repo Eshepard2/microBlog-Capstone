@@ -11,6 +11,71 @@ body {
   overflow: hidden;
   background-color: #fff;
 }
+.stars1 {
+  position: absolute;
+  width: 352px;
+  height: 179px;
+  left: -3px;
+  top: 12px;
+
+  background: url(assets/urban-stars-2.gif);
+}
+
+.stars2 {
+  position: absolute;
+  width: 352px;
+  height: 179px;
+  left: 231px;
+  top: 34.08px;
+
+  background: url(assets/urban-stars-2.gif);
+}
+.stars3 {
+  position: absolute;
+  width: 352px;
+  height: 179px;
+  left: 431px;
+  top: 24.08px;
+
+  background: url(assets/urban-stars-2.gif);
+}
+.stars4 {
+  position: absolute;
+  width: 352px;
+  height: 179px;
+  left: 631px;
+  top: 18.08px;
+
+  background: url(assets/urban-stars-2.gif);
+}
+.stars5 {
+  position: absolute;
+  width: 352px;
+  height: 179px;
+  left: 831px;
+  top: 10.08px;
+
+  background: url(assets/urban-stars-2.gif);
+}
+.stars6 {
+  position: absolute;
+  width: 352px;
+  height: 179px;
+  left: 1031px;
+  top: 10px;
+
+  background: url(assets/urban-stars-2.gif);
+}
+.stars7 {
+  position: absolute;
+  width: 352px;
+  height: 179px;
+  left: 1200px;
+  top: 5px;
+
+  background: url(assets/urban-stars-2.gif);
+}
+
 #check,
 #icon,
 #theme {
@@ -121,11 +186,7 @@ h1 {
   left: 120px;
   top: 50px;
 }
-h2 {
-  position: relative;
-  left: 120px;
-  top: 50px;
-}
+
 .img1 {
   position: absolute;
   width: 500px;

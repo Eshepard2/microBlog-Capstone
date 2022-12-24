@@ -21,7 +21,7 @@
     <!-- Run BEFORE page is finished loading (before window.onload): -->
     <script src="/auth.js"></script>
     <script>
-        // if (isLoggedIn() === false) window.location.replace("/");
+        if (isLoggedIn() === false) window.location.replace("/");
     </script>
 </head>
 
@@ -29,6 +29,8 @@
 
     <header>
         <h1>POSTS PAGE</h1>
+        <a href="/profile/profile.html">Profile Page</a>
+        <button type="button" onclick="logout()">Log out</button> <br>
     </header>
 
     <main>
