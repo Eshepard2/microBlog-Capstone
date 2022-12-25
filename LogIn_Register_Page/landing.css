@@ -6,10 +6,44 @@
 }
 body {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
   overflow: hidden;
   background-color: #fff;
+}
+
+h2 {
+  position: relative;
+  font-size: 4vw;
+  color: #fff;
+  -webkit-text-stroke: 0.1vw #fff;
+  text-transform: uppercase;
+  left: 120px;
+  top: 80px;
+}
+h2::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  color: #cc9af0;
+  -webkit-text-stroke: 0vw #000;
+  border-right: 1px #cc9af0;
+  overflow: hidden;
+  animation: animatee 10s linear infinite;
+}
+@keyframes animatee {
+  0%,
+  10%,
+  100% {
+    width: 0;
+  }
+  80%,
+  90% {
+    width: 100%;
+  }
 }
 .stars1 {
   position: absolute;
@@ -135,6 +169,15 @@ main {
 #check:checked ~ header {
   color: #fff;
 }
+#planet {
+  position: absolute;
+  width: 151px;
+  height: 108px;
+  left: 1380px;
+  top: 14px;
+  background: url(/LogIn_Register_Page/assets/bubble-gum-planet-saturn.gif);
+  background-repeat: no-repeat;
+}
 
 .shadow {
   width: 385px;
@@ -184,7 +227,7 @@ main {
 h1 {
   position: relative;
   left: 120px;
-  top: 50px;
+  top: 90px;
 }
 
 .img1 {
@@ -265,6 +308,7 @@ h1 {
   border-bottom: 1px solid #999;
   outline: none;
   background: transparent;
+  caret-color: #fb0094;
 }
 .submit-btn {
   width: 85%;
@@ -276,6 +320,11 @@ h1 {
   border: 0;
   outline: none;
   border-radius: 30px;
+}
+
+.submit-btn:hover {
+  transition: 0.5s;
+  transform: scale(1.2);
 }
 .check-box {
   margin: 30px 10px 30px 0;
