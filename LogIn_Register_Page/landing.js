@@ -8,6 +8,17 @@ const toggleBtn = document.querySelector("#btn2");
 const toggleBtn1 = document.querySelector("#btn");
 const image1 = document.querySelector("#img1");
 const image2 = document.querySelector("#img2");
+const planet = document.querySelector("#planet");
+
+const checkbox = document.getElementById("check");
+
+checkbox.addEventListener("click", function handleClick() {
+  if (checkbox.checked) {
+    planet.style.display = "block";
+  } else {
+    planet.style.display = "none";
+  }
+});
 
 loginForm.onsubmit = function (event) {
   // Prevent the form from refreshing the page,
