@@ -45,19 +45,26 @@ loginForm.onsubmit = function (event) {
 function openLoginForm() {
   image1.style.display = "block";
   image2.style.display = "none";
-  toggleBtn1.style.display = "block";
-  toggleBtn.style.display = "none";
-  loginForm.style.display = "block";
-  registerForm.style.display = "none";
+  loginForm.style.left = "50px";
+  registerForm.style.left = "450px";
+  toggleBtn1.style.left = "0";
+  // toggleBtn1.style.display = "block";
+  // toggleBtn.style.display = "none";
+  // loginForm.style.display = "block";
+  // registerForm.style.display = "none";
 }
 
 function openRegisterForm() {
   image1.style.display = "none";
   image2.style.display = "block";
-  toggleBtn1.style.display = "none";
-  toggleBtn.style.display = "block";
-  loginForm.style.display = "none";
-  registerForm.style.display = "block";
+  loginForm.style.left = "-400px";
+  registerForm.style.left = "50px";
+  toggleBtn1.style.left = "110px";
+
+  // toggleBtn1.style.display = "none";
+  // toggleBtn.style.display = "block";
+  // loginForm.style.display = "none";
+  // registerForm.style.display = "block";
 }
 
 registerForm.onsubmit = function (event) {

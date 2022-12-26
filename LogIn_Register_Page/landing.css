@@ -257,15 +257,17 @@ h1 {
   background: url(assets/martina-woman-getting-thumbs-up-and-likes-on-social-media\ -\ Copy.gif);
   background-repeat: no-repeat;
 }
-/* .form-box {
-  width: 380px;
+.form-box {
+  width: 385px;
   height: 480px;
   position: relative;
   margin: 6% auto;
-  background: rgba(233, 212, 240, 0.4);
   padding: 5px;
-  left: 350px;
-} */
+  left: -5px;
+  bottom: 25px;
+  background: rgb(255, 255, 255);
+  overflow: hidden;
+}
 .button-box {
   width: 220px;
   margin: 35px auto;
@@ -289,7 +291,7 @@ h1 {
   height: 100%;
   background: linear-gradient(to right, #cc9af0, #f85572);
   border-radius: 30px;
-  transition: 5s;
+  transition: 0.5s;
 }
 #btn2 {
   top: 0;
@@ -299,7 +301,7 @@ h1 {
   height: 100%;
   background: linear-gradient(to right, #cc9af0, #f85572);
   border-radius: 30px;
-  transition: 5s;
+  transition: 0.5s;
 }
 .input-group {
   top: 180px;
@@ -354,7 +356,7 @@ span {
   left: 50px;
 }
 #register {
-  left: 50px;
+  left: 450px;
 }
 
 p,
