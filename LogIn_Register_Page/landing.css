@@ -40,10 +40,19 @@ h2::before {
   100% {
     width: 0;
   }
-  80%,
+  70%,
   90% {
     width: 100%;
   }
+}
+#crown {
+  position: absolute;
+  width: 71px;
+  height: 78px;
+  left: 150px;
+  top: 24px;
+  background: url(assets/giphy.gif);
+  background-repeat: no-repeat;
 }
 .stars1 {
   position: absolute;
@@ -309,6 +318,12 @@ h1 {
   outline: none;
   background: transparent;
   caret-color: #fb0094;
+}
+.input-field:hover {
+  background-color: rgba(241, 191, 191, 0.2);
+  border-radius: 30px;
+  border-bottom: none;
+  transition: 0.8s;
 }
 .submit-btn {
   width: 85%;

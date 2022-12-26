@@ -9,14 +9,17 @@ const toggleBtn1 = document.querySelector("#btn");
 const image1 = document.querySelector("#img1");
 const image2 = document.querySelector("#img2");
 const planet = document.querySelector("#planet");
+const crown = document.querySelector("#crown");
 
 const checkbox = document.getElementById("check");
 
 checkbox.addEventListener("click", function handleClick() {
   if (checkbox.checked) {
     planet.style.display = "block";
+    crown.style.display = "block";
   } else {
     planet.style.display = "none";
+    crown.style.display = "none";
   }
 });
 
