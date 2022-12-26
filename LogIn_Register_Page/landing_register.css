@@ -51,7 +51,7 @@ h2::before {
   height: 78px;
   left: 150px;
   top: 24px;
-  background: url(assets/giphy.gif);
+  background: url(/LogIn_Register_Page/assets_landing_register/giphy.gif);
   background-repeat: no-repeat;
 }
 .stars1 {
@@ -61,7 +61,7 @@ h2::before {
   left: -3px;
   top: 12px;
 
-  background: url(assets/urban-stars-2.gif);
+  background: url(/LogIn_Register_Page/assets_landing_register/urban-stars-2.gif);
 }
 
 .stars2 {
@@ -71,7 +71,7 @@ h2::before {
   left: 231px;
   top: 34.08px;
 
-  background: url(assets/urban-stars-2.gif);
+  background: url(/LogIn_Register_Page/assets_landing_register/urban-stars-2.gif);
 }
 .stars3 {
   position: absolute;
@@ -80,7 +80,7 @@ h2::before {
   left: 431px;
   top: 24.08px;
 
-  background: url(assets/urban-stars-2.gif);
+  background: url(/LogIn_Register_Page/assets_landing_register/urban-stars-2.gif);
 }
 .stars4 {
   position: absolute;
@@ -89,7 +89,7 @@ h2::before {
   left: 631px;
   top: 18.08px;
 
-  background: url(assets/urban-stars-2.gif);
+  background: url(/LogIn_Register_Page/assets_landing_register/urban-stars-2.gif);
 }
 .stars5 {
   position: absolute;
@@ -98,7 +98,7 @@ h2::before {
   left: 831px;
   top: 10.08px;
 
-  background: url(assets/urban-stars-2.gif);
+  background: url(/LogIn_Register_Page/assets_landing_register/urban-stars-2.gif);
 }
 .stars6 {
   position: absolute;
@@ -107,7 +107,7 @@ h2::before {
   left: 1031px;
   top: 10px;
 
-  background: url(assets/urban-stars-2.gif);
+  background: url(/LogIn_Register_Page/assets_landing_register/urban-stars-2.gif);
 }
 .stars7 {
   position: absolute;
@@ -116,7 +116,7 @@ h2::before {
   left: 1200px;
   top: 5px;
 
-  background: url(assets/urban-stars-2.gif);
+  background: url(/LogIn_Register_Page/assets_landing_register/urban-stars-2.gif);
 }
 
 #check,
@@ -144,7 +144,7 @@ main {
 }
 #icon {
   z-index: 1;
-  background-image: url(assets/icons8-bright-91.png);
+  background-image: url(/LogIn_Register_Page/assets_landing_register/icons8-bright-91.png);
   background-size: 80%;
   background-repeat: no-repeat;
   background-position: center;
@@ -167,7 +167,7 @@ main {
 }
 
 #check:checked ~ #icon {
-  background-image: url(assets/moooon.png);
+  background-image: url(/LogIn_Register_Page/assets_landing_register/moooon.png);
 }
 #check:checked ~ #theme #color {
   background-color: rgb(26, 24, 24);
@@ -184,7 +184,7 @@ main {
   height: 108px;
   left: 1380px;
   top: 14px;
-  background: url(/LogIn_Register_Page/assets/bubble-gum-planet-saturn.gif);
+  background: url(/LogIn_Register_Page/assets_landing_register/bubble-gum-planet-saturn.gif);
   background-repeat: no-repeat;
 }
 
@@ -196,7 +196,6 @@ main {
   padding: 5px;
   left: 350px;
   bottom: 100px;
-  background: rgb(255, 255, 255);
 }
 .shadow::before {
   content: "";
@@ -245,7 +244,7 @@ h1 {
   height: 487px;
   left: 120px;
   top: 170px;
-  background: url(assets/martina-woman-asking-a-support-worker-a-question.gif);
+  background: url(/LogIn_Register_Page/assets_landing_register/martina-woman-asking-a-support-worker-a-question.gif);
   background-repeat: no-repeat;
 }
 .img2 {
@@ -254,17 +253,17 @@ h1 {
   height: 487px;
   left: 120px;
   top: 170px;
-  background: url(assets/martina-woman-getting-thumbs-up-and-likes-on-social-media\ -\ Copy.gif);
+  background: url(/LogIn_Register_Page/assets_landing_register/martina-woman-getting-thumbs-up-and-likes-on-social-media\ -\ Copy.gif);
   background-repeat: no-repeat;
 }
 .form-box {
-  width: 385px;
-  height: 480px;
+  width: 384px;
+  height: 481px;
   position: relative;
   margin: 6% auto;
   padding: 5px;
-  left: -5px;
-  bottom: 25px;
+  right: 4.5px;
+  bottom: 25.6px;
   background: rgb(255, 255, 255);
   overflow: hidden;
 }

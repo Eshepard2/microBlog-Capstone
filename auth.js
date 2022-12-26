@@ -80,33 +80,4 @@ function logout() {
     });
 }
 
-// POST /api/users
-function register(registerData) {
-  console.log(registerData);
-  const options = {
-    method: "POST",
-    headers: {
-      // This header specifies the type of content we're sending.
-      // This is required for endpoints expecting us to send
-      // JSON data.
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      username: registerData.username,
-      fullName: registerData.fullName,
-      password: registerData.password,
-    }),
-  };
 
-  fetch(api + "/api/users", options)
-    .then((response) => response.json())
-    .then((registerResponse) => {
-      if (registerResponse.username != undefined) {
-        alert("New User Created");
-        window.location.reload(); // redirect
-      } else {
-        registerForm.registerButton.disabled = false;
-        alert(registerResponse.message);
-      }
-    });
-}
