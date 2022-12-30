@@ -92,7 +92,7 @@ nav .search-bar input::placeholder {
 /*=============Main=================*/
 
 main {
-    position: relative;
+    position: static;
     top: 5.4rem;
 }
 
@@ -100,8 +100,23 @@ main .container {
     display: grid;
     grid-template-columns: 18vh auto 20vw;
     column-gap: 2rem;
-    position: relative;
+    position: static;
 }
+
+.postText{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+}
+
+
+/* test */
+/* .postText article{
+  max-width: 200px;
+  background-color: blue;
+  padding: 0.8em;
+  margin: 0.8em;
+} */
 
 /*=============Left=================*/
 
@@ -123,26 +138,26 @@ main .container .left .profile{
 
 /*=============Sidebar=================*/
 .left .sidebar {
-    margin-top: 1rem;
+    
     background: var(--color-white);
     border-radius: var(--card-border-radius);
 }
 
 .left .sidebar .menu-item {
-    display: flex;
+    display: inline-block;
     align-items: center;
     height: 4rem;
     cursor: pointer;
 }
 /*=============Stories=================*/
-.middle .stories {
+ .stories {
   display: flex;
   justify-content: space-between;
-  height: 12rem;
+  height: 19rem;
   gap: 0.5rem;
 }
 
-.middle .stories .story {
+ .stories .story {
   padding: var(--card-padding);
   border-radius: var(--card-border-radius);
   display: flex;
@@ -157,38 +172,27 @@ main .container .left .profile{
   overflow: hidden;
 }
 
-.middle .stories .story::before {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 5rem;
-  background: linear-gradient(transparent, rgba(0, 0, 0, 0.75) );
-  position: absolute;
-  bottom: 0;
- 
-}
-
-.middle .stories .story .name {
+ .stories .story .name {
     z-index: 2;
     
 }
 
-.middle .stories .story:nth-child(1) {
+ .stories .story:nth-child(1) {
   background: url(./postsAssets/profile-pic.png) no-repeat center center/cover;
 }
-.middle .stories .story:nth-child(2) {
+.stories .story:nth-child(2) {
   background: url(./postsAssets/girl1coding.jpg) no-repeat center center/cover;
 }
-.middle .stories .story:nth-child(3) {
+ .stories .story:nth-child(3) {
   background: url(./postsAssets/girl2coding.jpg) no-repeat center center/cover;
 }
-.middle .stories .story:nth-child(4) {
+ .stories .story:nth-child(4) {
   background: url(./postsAssets/girl3coding.webp) no-repeat center center/cover;
 }
-.middle .stories .story:nth-child(5) {
+ .stories .story:nth-child(5) {
   background: url(./postsAssets/girl4coding.jpg) no-repeat center center/cover;
 }
-.middle .stories .story:nth-child(6) {
+ .stories .story:nth-child(6) {
   background: url(./postsAssets/girl5coding.jpg) no-repeat center center/cover;
 }
 
@@ -201,11 +205,7 @@ main .container .left .profile{
   margin: 1rem 0;
   font-size: 0.85rem;
   line-height: 1.5;
-}
-
-.middle .feed .head {
-  display: flex;
-  justify-content: space-between;
+  float: right;
 }
 
 .middle .feed .user {

@@ -40,8 +40,14 @@
             <div class="avatar">
                 <img src="postsAssets/profile-pic.png" alt="profile picture">
             </div>
+            <div class="profile-page">
+                <a href="#">Profile Page</a>
+            </div>
+            <div class="logout">
+                <button type="submit" id="logout">Logout</button>
+            </div>
         </div>
-        </div>
+
     </nav>
 
 
@@ -52,92 +58,51 @@
 
     <!--============Main=====================-->
     <main>
-        <div class="container">
-        <div class="left">
-            <a class="profile">
-                <div class="profile-photo">
-                    <img src="postsAssets/profile-pic.png">
-                </div>
-                <div class="handle">
-                    <h4>Me</h4>
-                    <p class="text-muted">@Me</p>
-                </div>
-            </div>
-        </div>
-        </a>
-
-        <!-----------Sidebar------------->
-<div class="sidebar">
-    <a class="menu-item active">
-        <span><i class="uil uil-home"></i></span><h3>Home</h3>
-    </a>
-    <a class="menu-item active">
-        <span><i class="uil uil-compass"></i></span><h3>Explore</h3>
-    </a>
-    <a class="menu-item active">
-        <span><i class="uil uil-bell"></i></span><h3>Notifications</h3>
-    </a>
-    <a class="menu-item active">
-        <span><i class="uil uil-envelope-alt"></i></span><h3>Message</h3>
-    </a>
-    <a class="menu-item active">
-        <span><i class="uil uil-bookmark"></i></span><h3>Bookmarks</h3>
-    </a>
-    <a class="menu-item active">
-        <span><i class="uil uil-chart-line"></i></span><h3>Analytics</h3>
-    </a>
-    <a class="menu-item active">
-        <span><i class="uil uil-palette"></i></span><h3>Theme</h3>
-    </a>
-    <a class="menu-item active">
-        <span><i class="uil uil-setting"></i></span><h3>Settings</h3>
-    </a>
-</div>
         <!--============Middle======================-->
         <!--Stories-->
-        <div class="middle">
-            <div class="stories">
-                <div class="story">
-                    <div class="profile-photo">
-                        <img src="postsAssets/profile-pic.png" alt="" srcset="">
-                    </div>
-                    <p class="name">Your Story</p>
+
+        <div class="stories">
+            <div class="story">
+                <div class="profile-photo">
+                    <img src="postsAssets/profile-pic.png" alt="" srcset="">
                 </div>
-                <div class="story">
-                    <div class="profile-photo">
-                        <img src="postsAssets/girl1.png" alt="" srcset="">
-                    </div>
-                    <p class="name">Megan Wright</p>
-                </div>
-                <div class="story">
-                    <div class="profile-photo">
-                        <img src="postsAssets/girl2.png" alt="" srcset="">
-                    </div>
-                    <p class="name">Lisa Simpson</p>
-                </div>
-                <div class="story">
-                    <div class="profile-photo">
-                        <img src="postsAssets/girl3.png" alt="" srcset="">
-                    </div>
-                    <p class="name">Sammie Lucas</p>
-                </div>
-                <div class="story">
-                    <div class="profile-photo">
-                        <img src="postsAssets/girl4.png" alt="" srcset="">
-                    </div>
-                    <p class="name">Leroya Marguex</p>
-                </div>
-                <div class="story">
-                    <div class="profile-photo">
-                        <img src="postsAssets/girl5.png" alt="" srcset="">
-                    </div>
-                    <p class="name">Trisha Paytas</p>
-                </div>
+                <p class="name">Your Story</p>
             </div>
+            <div class="story">
+                <div class="profile-photo">
+                    <img src="postsAssets/girl1.png" alt="" srcset="">
+                </div>
+                <p class="name">Megan Wright</p>
+            </div>
+            <div class="story">
+                <div class="profile-photo">
+                    <img src="postsAssets/girl2.png" alt="" srcset="">
+                </div>
+                <p class="name">Lisa Simpson</p>
+            </div>
+            <div class="story">
+                <div class="profile-photo">
+                    <img src="postsAssets/girl3.png" alt="" srcset="">
+                </div>
+                <p class="name">Sammie Lucas</p>
+            </div>
+            <div class="story">
+                <div class="profile-photo">
+                    <img src="postsAssets/girl4.png" alt="" srcset="">
+                </div>
+                <p class="name">Leroya Marguex</p>
+            </div>
+            <div class="story">
+                <div class="profile-photo">
+                    <img src="postsAssets/girl5.png" alt="" srcset="">
+                </div>
+                <p class="name">Trisha Paytas</p>
+            </div>
+        </div>
 
 
-
-            <!--Posts-->
+        <!--Posts-->
+        <div class="middle">
             <div class="feeds">
                 <div class="feed">
                     <div class="head">
@@ -145,7 +110,7 @@
                             <div class="profile-photo">
                                 <img src="" alt="">
                             </div>
-                    
+
                             <div class="photo">
                                 <img class="photos" src="postsAssets/girl4coding.jpg" alt="" srcset="">
                             </div>
@@ -163,14 +128,71 @@
                                     <p>Liked by <b>Lisa Simpson</b> and <b>1,363 others</b></p>
                                 </div>
                                 <div class="caption">
-                                    <p id="postText"><b>Leroya Marguex</b>Post inserted here</p>
+                                    <p id="postText"><b>Leroya Marguex</b>No Posts</p>
                                 </div>
-                                <div class="comments text-muted">View all 364 comments</div>
+                                <div class="comments text-muted">
+                                   <button type="submit" id="viewAll">View all 95 comments</button> 
+
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+        </div>
+
+        <!-----------Sidebar------------->
+        <!-----Profile---->
+        <div class="container">
+            <div class="left">
+                <a class="profile">
+                    <div class="profile-photo">
+                        <img src="postsAssets/profile-pic.png">
+                    </div>
+                    <div class="handle">
+                        <h4>Me</h4>
+                        <p class="text-muted">@Me</p>
+                    </div>
+            </div>
+        </div>
+        </a>
+
+
+        <!--Sidebar Links-->
+        <div class="sidebar">
+            <a class="menu-item active">
+                <span><i class="uil uil-home"></i></span>
+                <h3>Home</h3>
+            </a>
+            <a class="menu-item active">
+                <span><i class="uil uil-compass"></i></span>
+                <h3>Explore</h3>
+            </a>
+            <a class="menu-item active">
+                <span><i class="uil uil-bell"></i></span>
+                <h3>Notifications</h3>
+            </a>
+            <a class="menu-item active">
+                <span><i class="uil uil-envelope-alt"></i></span>
+                <h3>Message</h3>
+            </a>
+            <a class="menu-item active">
+                <span><i class="uil uil-bookmark"></i></span>
+                <h3>Bookmarks</h3>
+            </a>
+            <a class="menu-item active">
+                <span><i class="uil uil-chart-line"></i></span>
+                <h3>Analytics</h3>
+            </a>
+            <a class="menu-item active">
+                <span><i class="uil uil-palette"></i></span>
+                <h3>Theme</h3>
+            </a>
+            <a class="menu-item active">
+                <span><i class="uil uil-setting"></i></span>
+                <h3>Settings</h3>
+            </a>
         </div>
 
         <!--=============Right================-->
@@ -187,6 +209,7 @@
 
     <!-- Page-specific code -->
     <script src="posts.js"></script>
+
 </body>
 
 </html>
