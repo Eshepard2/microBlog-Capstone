@@ -38,13 +38,8 @@ function login(loginData) {
   return fetch(api + "/auth/login", options)
     .then((response) => response.json())
     .then((loginData) => {
-      if (loginData.statusCode === 200) {
-        window.localStorage.setItem("login-data", JSON.stringify(loginData));
-        window.location.assign("/posts"); // redirect
-      } else {
-        loginForm.loginButton.disabled = false;
-        alert(loginData.message);
-      }
+      window.localStorage.setItem("login-data", JSON.stringify(loginData));
+      window.location.assign("/posts"); // redirect
     });
 }
 
@@ -79,5 +74,3 @@ function logout() {
       window.location.assign("/"); // redirect to landing page
     });
 }
-
-
