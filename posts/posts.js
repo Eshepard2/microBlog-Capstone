@@ -59,12 +59,10 @@ function getUsersPosts() {
 }
 
 
-function searchBarFunction() {
-  const searchBar = document.getElementById("search")
-  const filter = searchBar.value.toLowerCase()
 
-  
-}
+
+
+
 
 
 
