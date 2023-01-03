@@ -6,11 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="profile.css">
+    <script src="/auth.js"></script>
+    <script>
+        if (isLoggedIn() === false) window.location.replace("/");
+    </script>
 </head>
 <body>
     <header>
         <nav>
             <a href="#">Post</a>
+            <button type="submit" id="logOutBtn">Logout</button>
         </nav>
     </header>
 
@@ -18,10 +23,10 @@
     <div>
       <form id="newPostForm">
             <fieldset>
-        
+            
                     <textarea name="newPostTextArea" id="newPostId" cols="30" rows="10"></textarea>
                     <input id= "newPostBtn" type="button" value="create New Post">
-                
+            
              </fieldset>
         </form>
     </div>
