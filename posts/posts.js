@@ -5,7 +5,7 @@
 const allPostsEndpoint = "https://microbloglite.herokuapp.com/api/posts";
 const pElement = document.getElementById("postText");
 const viewAllBtn = document.getElementById("viewAll");
-let logoutBtn = document.getElementById("logout");
+let logoutBtn = document.getElementById("logoutBtn");
 
 //logut function
 logoutBtn.addEventListener("click", logout)
@@ -60,6 +60,166 @@ function getUsersPosts() {
 
 
 
+
+//THEM
+const theme=document.querySelector('#theme');
+const themeModel =document.querySelector('.customize-theme');
+const fontSizes =document.querySelectorAll('.choose-size span');
+var root =document.querySelector(':root');
+const colorPalette = document.querySelectorAll('.choose-color span');
+const Bg1 =document.querySelector('.bg-1');
+const Bg2 =document.querySelector('.bg-2');
+const Bg3 =document.querySelector('.bg-3');
+
+
+
+
+//THEME COUSTOMIZATION
+
+//opens modal
+const openThemeModal =()=>{
+    themeModel.style.display='grid';
+}
+//close modal
+const closeThemeModal=(e)=>{
+    if (e.target.classList.contains('customize-theme')) {
+        themeModel.style.display='none';        
+    }
+}
+
+//close modal
+themeModel.addEventListener('click',closeThemeModal);
+
+theme.addEventListener('click',openThemeModal);
+
+
+
+//FONT SIZE
+//REMOVE active class font
+const removeSizeSelector= ()=>{
+    fontSizes.forEach(size=>{
+        size.classList.remove('active');
+    })
+}
+
+fontSizes.forEach(size => { 
+    size.addEventListener('click',()=>{
+        removeSizeSelector();
+        let fontSize;
+        size.classList.toggle('active');
+
+        if (size.classList.contains('font-size1')){
+            fontSize='10px';
+            root.style.setProperty('----sticky-top-left','5.4rem');
+            root.style.setProperty('----sticky-top-right','5.4rem');
+        }
+        else if (size.classList.contains('font-size2')){
+            fontSize='13px';
+            root.style.setProperty('----sticky-top-left','5.4rem');
+            root.style.setProperty('----sticky-top-right','-7rem');
+        }
+        else if (size.classList.contains('font-size3')){
+            fontSize='15px';
+            root.style.setProperty('----sticky-top-left','-2rem');
+            root.style.setProperty('----sticky-top-right', '-17rem');
+        }
+        else if (size.classList.contains('font-size4')){
+            fontSize='17px';
+            root.style.setProperty('----sticky-top-left','-5rem');
+            root.style.setProperty('----sticky-top-right','-25rem');
+        }
+        else if (size.classList.contains('font-size5')){
+            fontSize='18px';
+            root.style.setProperty('----sticky-top-left','-12rem');
+            root.style.setProperty('----sticky-top-right','-35rem');
+        }
+        //change font size of the root html
+    document.querySelector('html').style.fontSize = fontSize;
+    })
+})
+
+//Remove active color class
+const changeActiveColorClass=()=>{
+    colorPalette.forEach(colorPicker=>{
+        colorPicker.classList.remove('active');
+    })
+}
+
+//color
+colorPalette.forEach(color =>{
+    color.addEventListener('click',()=>{
+        let primaryHue;
+        //remove action class from color
+        changeActiveColorClass();
+
+        if(color.classList.contains('color-1')){
+            primaryHue =0;
+        }
+        else if(color.classList.contains('color-2')){
+            primaryHue=314;
+        }
+        else if(color.classList.contains('color-3')){
+            primaryHue=300;
+        }
+        else if(color.classList.contains('color-4')){
+            primaryHue=166;
+        }
+        else if(color.classList.contains('color-5')){
+            primaryHue=42;
+        }
+        color.classList.add('active');
+        root.style.setProperty('--primary-color-hue',primaryHue);
+    })
+})
+
+//Theme BACKGROUND value
+let lightColorLightness;
+let whiteColorLightness;
+let darkColorLightness;
+
+//changes background color
+const changeBG =() =>{
+    root.style.setProperty('--light-color-lightness',lightColorLightness);
+    root.style.setProperty('--white-color-lightness',whiteColorLightness);
+    root.style.setProperty('--dark-color-lightness',darkColorLightness);
+}
+
+Bg1.addEventListener('click',()=>{
+    //add active class
+    Bg1.classList.add('active');
+    //remove active from class
+    Bg2.classList.remove('active');
+    Bg3.classList.remove('active');
+    window.location.reload();
+});
+
+Bg2.addEventListener('click',()=>{
+    darkColorLightness='95%'
+    whiteColorLightness='20%'
+    lightColorLightness='15%'
+
+    //add active class
+    Bg2.classList.add('active');
+    //remove active from class
+    Bg1.classList.remove('active');
+    Bg3.classList.remove('active');
+    changeBG();
+});
+
+Bg3.addEventListener('click',()=>{
+    darkColorLightness='95%'
+    whiteColorLightness='10%'
+    lightColorLightness='0%'
+
+    //add active class
+    Bg3.classList.add('active');
+    //remove active from class
+    Bg1.classList.remove('active');
+    Bg2.classList.remove('active');
+    changeBG();
+
+
+})
 
 
 
