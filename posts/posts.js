@@ -1,22 +1,31 @@
 /* Posts Page JavaScript */
 
 "use strict";
-// all variablies
+
+// All variablies
+const loginData = getLoginData();
 const allPostsEndpoint = "https://microbloglite.herokuapp.com/api/posts";
+const allUsersEndpoint = "https://microbloglite.herokuapp.com/api/users";
 const pElement = document.getElementById("postText");
 const viewAllBtn = document.getElementById("viewAll");
+const contactsDiv = document.querySelector(".contact-profile");
+const smallTagOutput = document.getElementById("usernameB");
 let logoutBtn = document.getElementById("logoutBtn");
 
-//logut function
+//Calling function before the rest of the JavaScript is executed
+getUsersPosts();
+
+getContacts();
+
+
+//Logut Event Listener
 logoutBtn.addEventListener("click", logout)
+
 
 //View All Button, to see all posts
 viewAllBtn.addEventListener("click", getAllUsersPosts)
 
-//calling function before the rest of the JavaScript is executed
-getUsersPosts();
-
-
+//Function to GET all of the users posts
 function getAllUsersPosts() {
   const loginData = getLoginData();
   console.log(loginData.token);
@@ -31,20 +40,74 @@ function getAllUsersPosts() {
     .then((data) => toHTML(data));
 }
 
-
+// function toHTML(data) {
+//     data.forEach((element) => {
+//       pElement.innerHTML += `<article>
+//    <b>${element.username}</b>
+//    <p>${element.text}</p>
+//    </article>
+//   `;
+//     });
+//   }
+//Function to DISPLAY all of the users posts
 function toHTML(data) {
     data.forEach((e) => {
-      pElement.innerHTML += `<article>
+      pElement.innerHTML += `<div id="sauce">
    <b>${e.username}</b>
+
    <p>${e.text}</p>
-   </article>
+   </div>
+   <br>
   `;
     });
   }
 
+//Display username function
+function displayUsername() {
+    document.querySelector('.text-muted').innerHTML = loginData.username;
+   }
+   displayUsername();
+   
+   
+   //Function to GET all of the users posts
+   function getContacts() {
+       const loginData = getLoginData();
+       console.log(loginData.token);
+       let options = {
+         method: "GET",
+         headers: {
+           Authorization: `Bearer ${loginData.token}`,
+         },
+       };
+       fetch(allUsersEndpoint + `/?limit=10&offset=1`, options)
+         .then((response) => response.json())
+         .then((data) => displayContacts(data));
+     }
+   
+     
+       function displayContacts(data) {
+           data.forEach((element) => {
+            smallTagOutput.innerHTML += `
+            <div class="contacts">
+        <div class="contact-profile">
+         <div class="profile-photo">
+             <img src="postsAssets/girl5.png">
+         </div>
+         <div class="notification-body">
+             <small>Full Name</small>
+             <b>${element.username}</b>
+         </div>
+         </div>
+        </div>
+         `
+           });
+         }
+     
 
 
 
+
+//Function to display the first 10 users posts
 function getUsersPosts() {
     const loginData = getLoginData();
     let options = {
@@ -61,49 +124,49 @@ function getUsersPosts() {
 
 
 
-//THEM
-const theme=document.querySelector('#theme');
-const themeModel =document.querySelector('.customize-theme');
-const fontSizes =document.querySelectorAll('.choose-size span');
-var root =document.querySelector(':root');
+//THEME
+const theme = document.querySelector('#theme');
+const themeModel = document.querySelector('.customize-theme');
+const fontSizes = document.querySelectorAll('.choose-size span');
+var root = document.querySelector(':root');
 const colorPalette = document.querySelectorAll('.choose-color span');
-const Bg1 =document.querySelector('.bg-1');
-const Bg2 =document.querySelector('.bg-2');
-const Bg3 =document.querySelector('.bg-3');
+const Bg1 = document.querySelector('.bg-1');
+const Bg2 = document.querySelector('.bg-2');
+const Bg3 = document.querySelector('.bg-3');
 
 
 
 
 //THEME COUSTOMIZATION
 
-//opens modal
-const openThemeModal =()=>{
+//opens model
+const openThemeModel =()=>{
     themeModel.style.display='grid';
 }
-//close modal
-const closeThemeModal=(e)=>{
-    if (e.target.classList.contains('customize-theme')) {
+//close model
+const closeThemeModel=(element) => {
+    if (element.target.classList.contains('customize-theme')) {
         themeModel.style.display='none';        
     }
 }
 
-//close modal
-themeModel.addEventListener('click',closeThemeModal);
+//close model
+themeModel.addEventListener('click',closeThemeModel);
 
-theme.addEventListener('click',openThemeModal);
+theme.addEventListener('click',openThemeModel);
 
 
 
 //FONT SIZE
 //REMOVE active class font
-const removeSizeSelector= ()=>{
-    fontSizes.forEach(size=>{
+const removeSizeSelector= () => {
+    fontSizes.forEach(size => {
         size.classList.remove('active');
     })
 }
 
 fontSizes.forEach(size => { 
-    size.addEventListener('click',()=>{
+    size.addEventListener('click',() => {
         removeSizeSelector();
         let fontSize;
         size.classList.toggle('active');
