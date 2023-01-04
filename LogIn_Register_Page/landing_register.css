@@ -6,7 +6,7 @@
 }
 body {
   width: 100%;
-  min-height: 100vh;
+  min-height: 1000vh;
   position: relative;
   overflow: hidden;
   background-color: #fff;
@@ -51,7 +51,7 @@ h2::before {
   height: 78px;
   left: 150px;
   top: 24px;
-  background: url(/LogIn_Register_Page/assets_landing_register/giphy.gif);
+  background: url(LogIn_Register_Page/assets_landing_register/giphy.gif);
   background-repeat: no-repeat;
 }
 .stars1 {
@@ -127,6 +127,9 @@ h2::before {
   left: 0;
   width: 40px;
   height: 40px;
+}
+header {
+  display: flex;
 }
 main {
   width: 100%;
@@ -233,9 +236,9 @@ main {
   }
 }
 h1 {
-  position: relative;
+  position: absolute;
   left: 120px;
-  top: 90px;
+  top: 150px;
 }
 
 .img1 {
@@ -367,4 +370,53 @@ a {
 
 #registerButton {
   margin: 10px 10px;
+}
+
+@media screen and (max-width: 992px) {
+  body {
+    overflow-y: auto;
+  }
+  #check:checked ~ #theme #color {
+    display: none;
+  }
+  .stars1,
+  .stars2,
+  .stars3,
+  .stars4,
+  .stars5,
+  .stars6,
+  .stars7,
+  #planet {
+    display: none;
+  }
+  .img1,
+  .img2 {
+    position: relative;
+    display: flex;
+    left: 0;
+    width: 350px;
+    height: 487px;
+  }
+
+  .form-box {
+    position: relative;
+  }
+  .shadow {
+    top: 50px;
+    left: auto;
+    width: 344px;
+    height: 441px;
+    position: relative;
+    margin: 6% auto;
+    padding: 0px;
+  }
+  .form-box {
+    left: 0.5px;
+    top: -20px;
+    width: 344px;
+    height: 441px;
+    position: relative;
+    margin: 6% auto;
+    padding: 5px;
+  }
 }
