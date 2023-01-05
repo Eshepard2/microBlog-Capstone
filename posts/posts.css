@@ -37,10 +37,7 @@
   border: none;
 }
 
-#sauce{
-  border: 2px solid black;
-  
-}
+
 
 body {
   font-family: "Poppins", sans-serif;
@@ -428,6 +425,7 @@ main .container .left .profile {
 }
 
 /* <<<<<<<<<<<<<<FEEDS-POST>>>>>>>>>>>>>>>>>> */
+
 .middle .feeds .feed {
   background: var(--color-white);
   border-radius: var(--card-border-radius);
@@ -475,9 +473,38 @@ main .container .left .profile {
   margin-left: 0.5rem;
 }
 
+#postText{
+  font-size: x-large;
+}
+
+#viewAll{
+  background: linear-gradient(to right, #cc9af0, #f85572);
+  border-radius: 20px;
+}
+
+#space{
+  background-color: grey;
+}
+
 /* <<<<<<<<<<<<<<<<<<<<<<<RIGHT>>>>>>>>>>>>>>>>>>>>>>>> */
 /* <<<<<<<<<Contacts>>>>>>>>>> */
+#allContacts{
+  padding: 10px 30px;
 
+  cursor: pointer;
+
+  display: block;
+
+  margin: auto;
+
+  background: linear-gradient(to right, #cc9af0, #f85572) !important;
+
+  border: 0;
+
+  outline: none;
+
+  border-radius: 30px;
+}
 
 
 /* <<<<<<<<<FRIEND REQUESTS>>>>>>>>>> */

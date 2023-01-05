@@ -6,10 +6,13 @@
 const loginData = getLoginData();
 const allPostsEndpoint = "https://microbloglite.herokuapp.com/api/posts";
 const allUsersEndpoint = "https://microbloglite.herokuapp.com/api/users";
+const randomPhotoEndpoint = "https://i.pravatar.cc/300";
 const pElement = document.getElementById("postText");
 const viewAllBtn = document.getElementById("viewAll");
 const contactsDiv = document.querySelector(".contact-profile");
 const smallTagOutput = document.getElementById("usernameB");
+const seeAllContactsBtn = document.getElementById("allContacts");
+const userFullNameH4 = document.getElementById("h4");
 let logoutBtn = document.getElementById("logoutBtn");
 
 //Calling function before the rest of the JavaScript is executed
@@ -17,13 +20,15 @@ getUsersPosts();
 
 getContacts();
 
-
-//Logut Event Listener
+//Logout Event Listener
 logoutBtn.addEventListener("click", logout)
 
 
-//View All Button, to see all posts
+//View All posts button Event Listener, to see all posts
 viewAllBtn.addEventListener("click", getAllUsersPosts)
+
+//View ALL contacts button Event Listener, to see all contacts
+seeAllContactsBtn.addEventListener("click", getAllContacts)
 
 //Function to GET all of the users posts
 function getAllUsersPosts() {
@@ -35,32 +40,91 @@ function getAllUsersPosts() {
       Authorization: `Bearer ${loginData.token}`,
     },
   };
-  fetch(allPostsEndpoint, options)
+  fetch(allPostsEndpoint + `/?offset=10`, options)
     .then((response) => response.json())
     .then((data) => toHTML(data));
 }
 
-// function toHTML(data) {
-//     data.forEach((element) => {
-//       pElement.innerHTML += `<article>
-//    <b>${element.username}</b>
-//    <p>${element.text}</p>
-//    </article>
-//   `;
-//     });
-//   }
+//Function to display the first 10 users posts
+function getUsersPosts() {
+    const loginData = getLoginData();
+    let options = {
+        method: "GET",
+        headers: {
+            Authorization: `Bearer ${loginData.token}`,
+        },
+    };
+    fetch(allPostsEndpoint + `/?limit=10&offset=0`, options)
+    .then((response) => response.json())
+    .then((data) => toHTML(data));
+}
+
+
+function randomPicGenerated() {
+    fetch(randomPhotoEndpoint)
+    .then((response) => response.json())
+    .then((data) => toHTML(data));
+};
+
+
 //Function to DISPLAY all of the users posts
 function toHTML(data) {
-    data.forEach((e) => {
-      pElement.innerHTML += `<div id="sauce">
-   <b>${e.username}</b>
+    //display the amount of posts
+    // function displayPostAmount() {
+    //     viewAllBtn.innerHTML = data.length;
+    //    }
+    //    displayPostAmount();
+    data.forEach((element) => {
+        console.log(data.length)
+      pElement.innerHTML += `<div class="feeds">
+      <!-- ----------------FEEDS-1--------------------- -->
+      <div class="feed">
+          <div class="head">
+              <div class="user">
+                  <div class="profile-photo">
+                      <img src="${randomPhotoEndpoint}?timestamp=${Date.now()}" alt="">
+                  </div>
 
-   <p>${e.text}</p>
-   </div>
-   <br>
+
+                  <div class="ingo">
+                      <h3>${element.username}</h3>
+                      <small>6 Hours Ago</small>
+                  </div>
+              </div>
+              <span class="edit">
+                  <i class="uil uil-ellipsis-h"></i>
+              </span>
+          </div>
+          <div class="photo">
+          <img src="${randomPhotoEndpoint}?timestamp=${Date.now()}" />
+          </div>
+          <div class="action-button">
+              <div class="interaction-buttons">
+                  <span><i class=" uil uil-heart"></i></span>
+                  <span><i class="uil uil-comment-alt-dots"></i></span>
+                  <span><i class="uil uil-share"></i></span>
+              </div> 
+              <div class="bookmark">
+                  <span><i class="uil uil-bookmark"></i></span>
+              </div>
+          </div>
+          <div class="liked-by">
+              <span><img src="postsAssets/girl2.png"></span>
+              <span><img src="postsAssets/girl4.png"></span>
+              <span><img src="postsAssets/girl1.png"></span>
+              <p>Liked by <b>Megan Wright, Leroya Mauguez...</b>and <b>2473 others</b></p>
+          </div>
+          <div class="caption">
+              <p id="postText">${element.text}</p>
+          </div>
+      </div>
+  </div>
+  
   `;
     });
   }
+
+
 
 //Display username function
 function displayUsername() {
@@ -68,9 +132,11 @@ function displayUsername() {
    }
    displayUsername();
    
-   
+      
+
    //Function to GET all of the users posts
    function getContacts() {
+    
        const loginData = getLoginData();
        console.log(loginData.token);
        let options = {
@@ -79,22 +145,39 @@ function displayUsername() {
            Authorization: `Bearer ${loginData.token}`,
          },
        };
-       fetch(allUsersEndpoint + `/?limit=10&offset=1`, options)
+       fetch(allUsersEndpoint + `/?limit=5&offset=0`, options)
          .then((response) => response.json())
-         .then((data) => displayContacts(data));
+         .then((data) => displayContacts(data))
+         
      }
    
-     
+     //Display ALL contacts once (seeAllContactsBtn) button is clicked
+     function getAllContacts() {
+        const loginData = getLoginData();
+        console.log(loginData.token);
+        let options = {
+          method: "GET",
+          headers: {
+            Authorization: `Bearer ${loginData.token}`,
+          },
+        };
+        fetch(allUsersEndpoint + `/?limit=15&offset=5`, options)
+          .then((response) => response.json())
+          .then((data) => displayContacts(data));
+      }
+    
+      
+
        function displayContacts(data) {
            data.forEach((element) => {
             smallTagOutput.innerHTML += `
-            <div class="contacts">
+        <div class="contacts">
         <div class="contact-profile">
          <div class="profile-photo">
-             <img src="postsAssets/girl5.png">
+             <img src="${randomPhotoEndpoint}?timestamp=${Math.random()}">
          </div>
          <div class="notification-body">
-             <small>Full Name</small>
+             <small>${element.fullName}</small>
              <b>${element.username}</b>
          </div>
          </div>
@@ -107,21 +190,22 @@ function displayUsername() {
 
 
 
-//Function to display the first 10 users posts
-function getUsersPosts() {
+
+
+function getFullname() {
     const loginData = getLoginData();
+    console.log(loginData.token);
     let options = {
-        method: "GET",
-        headers: {
-            Authorization: `Bearer ${loginData.token}`,
-        },
+      method: "GET",
+      headers: {
+        Authorization: `Bearer ${loginData.token}`,
+      },
     };
-    fetch(allPostsEndpoint + `/?limit=10&offset=1`, options)
-    .then((response) => response.json())
-    .then((data) => toHTML(data));
-}
-
-
+    fetch(allUsersEndpoint + `/${data.username}`, options)
+      .then((response) => response.json())
+      .then((data) => displayContacts(data))
+      
+  }
 
 
 //THEME
@@ -247,7 +331,11 @@ const changeBG =() =>{
     root.style.setProperty('--dark-color-lightness',darkColorLightness);
 }
 
-Bg1.addEventListener('click',()=>{
+Bg1.addEventListener('click',() => {
+    darkColorLightness='95%'
+    whiteColorLightness='20%'
+    lightColorLightness='15%'
+    
     //add active class
     Bg1.classList.add('active');
     //remove active from class

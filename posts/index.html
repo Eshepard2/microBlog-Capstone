@@ -42,13 +42,11 @@
                 <input type="search" placeholder="Search Posts">
             </div>
             <div class="create">
-                
-                
-                <button type="submit" id="logoutBtn" class="logoutBtn">Logout</button>
-
                 <div class="profile-photo">
                     <img src="postsAssets/profile-pic.png">
                 </div>
+
+                <button type="submit" id="logoutBtn" class="logoutBtn">Logout</button>
             </div>
         </div>
     </nav>
@@ -82,6 +80,10 @@
                         <span><i class="uil uil-home"></i></span>
                         <h3>Home</h3>
                     </a>
+                    <!-- <a class="menu-item">
+                        <span><i class="uil uil-person"></i></span>
+                        <h3>Profile</h3>
+                    </a> -->
                     <a class="menu-item ">
                         <span><i class="uil uil-compass"></i></span>
                         <h3>Explore</h3>
@@ -198,47 +200,16 @@
                             <p>Liked by <b>Megan Wright, Leroya Mauguez...</b>and <b>2473 others</b></p>
                         </div>
                         <div class="caption">
-                            <p id="postText"></p>
+                            <p id="postText">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque odio labore accusamus nemo laborum ex eius libero delectus ipsum adipisci, molestias veniam modi corporis pariatur quae iure blanditiis ratione cum?</p>
                         </div>
                         <div class="comments text-muted">
-                            <button type="submit" id="viewAll">View all 95 comments</button>
-
+                            <button type="submit" id="viewAll">View all 78 Posts</button>
                         </div>  
                     </div>
                 </div>
                 </div>
                 <!-- ----------------RIGHT--------------------- -->
             <div class="right">
-
-
-                <!-- ----------------FRIEND REQUESTS--------------------- -->
-                <a class=" btn request-btn">
-                    <h3>Requests</h3>
-                </a>
-                <div class="friend-requests" id="reuest-popup">
-                    <div class="request">
-                        <div class="info">
-                            <div class="profile-photo">
-                                <img src="postsAssets/girl1.png">
-                            </div>
-                            <div>
-                                <h5>Tony6</h5>
-                                <p class="text-muted">
-                                    8 mutual friends
-                                </p>
-                            </div>
-                        </div>
-                        <div class="action">
-                            <button class="btn btn-primar">
-                                Accept
-                            </button>
-                            <button class="btn">
-                                Decline
-                            </button>
-                        </div>
-                    </div>
-                    
-                </div>
                 <!-- ----------------CONTACT--------------------- -->
                 <div class="contacts">
                     <div class="contact">
@@ -255,18 +226,10 @@
                         </div>
                         <div class="notification-body">
                             <small id="usernameB"></small>
-                            <b id="username">Username</b>
+                            <b id="username"></b>
                         </div>
                     </div>
-                    <div class="contact-profile">
-                        <div class="profile-photo">
-                            <img src="postsAssets/girl2.png">
-                        </div>
-                        <div class="notification-body">
-                            <small>Full Name</small>
-                            <b >Username</b>
-                        </div>
-                    </div>
+                    <button type="submit" id="allContacts">See All Contacts</button>
                 </div>
             </div>
             <!-- ----------------END OF RIGHT--------------------- -->
