@@ -99,8 +99,10 @@ img {
 }
 
 .text-muted {
-  color: var(--color-gray);
-  font-size: 0.9rem;
+  color: var(--color-black);
+  font-size: 1.5rem;
+  align-items: center;
+  margin-top: 10px;
 }
 
 /* <<<<<<<<<<<<<<NAVBAR>>>>>>>>>>>>>>>>>> */
@@ -504,8 +506,20 @@ main .container .left .profile {
   outline: none;
 
   border-radius: 30px;
+
+  position: sticky;
 }
 
+/* .contact{
+  position: fixed;
+} */
+
+.contact-profile{
+  margin-top: 1rem;
+  background: var(--color-white);
+  border-radius: var(--card-border-radius);
+  overflow-y: visible;
+}
 
 /* <<<<<<<<<FRIEND REQUESTS>>>>>>>>>> */
 .right .request-btn{
@@ -560,6 +574,7 @@ a.btn.request-btn {
 }
 .right .contacts .contact-profile{
   padding: 10px 0;
+  
 }
 
 

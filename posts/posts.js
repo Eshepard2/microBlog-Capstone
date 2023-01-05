@@ -180,7 +180,7 @@ function displayUsername() {
              <small>${element.fullName}</small>
              <b>${element.username}</b>
          </div>
-         </div>
+        </div>
         </div>
          `
            });
