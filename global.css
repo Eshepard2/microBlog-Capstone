@@ -86,7 +86,7 @@
 .footer .social {
   font-family: "Helvetica";
   font-size: 30px;
-  font-weight: 100;
+  font-weight: 200;
   margin-top: 70px;
   margin-left: 40px;
 }
@@ -99,29 +99,39 @@
   margin-left: 40px;
   color: black;
 }
-.social {
+
+.facebook,
+.twitter,
+.instagram {
+  width: 65px;
+  height: 65px;
   position: absolute;
-  z-index: 10;
-  /* bottom: 20px; */
-  display: flex;
-  /* justify-content: center; */
-  /* align-items: center; */
-  right: 100px;
-  left: 150px;
-}
-
-.social .li {
-  list-style: none;
-}
-
-.social .li .a {
-  display: inline-block;
-  margin-right: 20px;
   filter: invert(1);
   transform: scale(0.5);
   transition: 0.5s;
+  cursor: pointer;
 }
 
-.social .li .a:hover {
+.facebook {
+  left: 150px;
+}
+
+.twitter {
+  left: 250px;
+}
+
+.instagram {
+  left: 350px;
+}
+
+.instagram:hover {
+  transform: scale(0.5) translateY(-15px);
+}
+
+.twitter:hover {
+  transform: scale(0.5) translateY(-15px);
+}
+
+.facebook:hover {
   transform: scale(0.5) translateY(-15px);
 }
