@@ -196,7 +196,8 @@ a {
     /* color: rgb(236, 29, 191);  */
     color: white;
     background: linear-gradient(to right, #cc9af0, #f85572);
-    position: relative;
+    margin-left: 10px;
+    position: absolute;
     width: 180px;
     height: 30px;
     border-radius: 50px; 
@@ -221,8 +222,7 @@ a {
     width: 180px;
     height: 30px;
     border-radius: 50px; 
-    text-align: center;
-    align-items: center;
+    left: 100px;
 }
 
 /* <<<<<Img>>>>*/
