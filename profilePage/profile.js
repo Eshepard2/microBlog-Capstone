@@ -1,12 +1,11 @@
 
-// get all DOM Nodes 
+ 
 let createPostEndpoint = "https://microbloglite.herokuapp.com/api/posts";
 const logOutBtn = document.getElementById("logOutBtn");
 const newPostTextArea = document.querySelector("textarea").value;
 const newPostBtn = document.getElementById("newPostBtn");
 const loginData = getLoginData();
 
-// add event listener
 newPostBtn.addEventListener("click",postSomething);
 logOutBtn.addEventListener("click", logout);
 
@@ -42,6 +41,28 @@ fetch(createPostEndpoint, options)
     window.location.assign("/posts")
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     // .catch(error => console.error(error))
     
