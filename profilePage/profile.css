@@ -62,7 +62,6 @@ body {
 nav {
     border-bottom: 1px solid black;
     width: 100%;
-    /* background: var(--color-white); */
     padding: 0.7rem 0;
     position: fixed;
     top: 0;
@@ -145,24 +144,18 @@ nav {
   
   }
 
-  /*<<<<<<Footer>>>>>*/
-
-
-
 /* <<<<<<Buttons>>>>>> */
 #logOutBtn {
     position: relative;
     left: 1200px;
     margin: auto;
     border-radius: 40px;
-    /* background: var(--color-primary); */
     color: rgb(236, 29, 191);
     border: 3px solid rgb(172, 8, 222);
     cursor: pointer;
 }
 
 .btn {
-    /* display: flex; */
     justify-content: center;
     padding: 20px;
     font-weight: 500;
@@ -189,11 +182,9 @@ nav {
 }
 
 a {
-    /* background: var(--color-primary); */
      text-decoration: none;
     border: 3px solid rgb(172, 8, 222);
     border-radius: 50px;
-    /* color: rgb(236, 29, 191);  */
     color: white;
     background: linear-gradient(to right, #cc9af0, #f85572);
     margin-left: 10px;
@@ -205,10 +196,7 @@ a {
     align-items: center;
     cursor: pointer;
 }
-/* .post{
-    width: 2000px;
-    height: 30px;
-} */
+
 .post:hover {
     background-color:rgba(236, 29, 191,0.4);
     color:  rgb(238, 234, 237);   
@@ -232,7 +220,6 @@ a {
     border-radius: 75%;
     position: relative;
     left: 90px;
-    /* align-items: center; */
     justify-content: center;
 
 }   
