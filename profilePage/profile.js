@@ -45,7 +45,56 @@ fetch(createPostEndpoint, options)
 
 
 
+// function getContacts() {
+    
+//     const loginData = getLoginData();
+//     console.log(loginData.token);
+//     let options = {
+//       method: "GET",
+//       headers: {
+//         Authorization: `Bearer ${loginData.token}`,
+//       },
+//     };
+//     fetch(allUsersEndpoint + `/?limit=5&offset=0`, options)
+//       .then((response) => response.json())
+//       .then((data) => displayContacts(data))
+      
+//   }
 
+//   //Display ALL contacts once (seeAllContactsBtn) button is clicked
+//   function getAllContacts() {
+//      const loginData = getLoginData();
+//      console.log(loginData.token);
+//      let options = {
+//        method: "GET",
+//        headers: {
+//          Authorization: `Bearer ${loginData.token}`,
+//        },
+//      };
+//      fetch(allUsersEndpoint + `/?limit=15&offset=5`, options)
+//        .then((response) => response.json())
+//        .then((data) => displayContacts(data));
+//    }
+ 
+   
+
+//     function displayContacts(data) {
+//         data.forEach((element) => {
+//          smallTagOutput.innerHTML += `
+//      <div class="contacts">
+//      <div class="contact-profile">
+//       <div class="profile-photo">
+//           <img src="${randomPhotoEndpoint}?timestamp=${Math.random()}">
+//       </div>
+//       <div class="notification-body">
+//           <small>${element.fullName}</small>
+//           <b>${element.username}</b>
+//       </div>
+//      </div>
+//      </div>
+//       `
+//         });
+//       }
 
 
 
